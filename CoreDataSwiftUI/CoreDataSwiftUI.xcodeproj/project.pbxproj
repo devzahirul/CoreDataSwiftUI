@@ -14,6 +14,12 @@
 		FA25D02D26E383C700CB81C1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D02C26E383C700CB81C1 /* Persistence.swift */; };
 		FA25D03026E383C700CB81C1 /* CoreDataSwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA25D02E26E383C700CB81C1 /* CoreDataSwiftUI.xcdatamodeld */; };
 		FA25D03826E48D9400CB81C1 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D03726E48D9400CB81C1 /* CreatePostView.swift */; };
+		FA25D08826E4F17900CB81C1 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D08726E4F17900CB81C1 /* PostViewModel.swift */; };
+		FA25D08A26E4F1DD00CB81C1 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D08926E4F1DD00CB81C1 /* ViewModelFactory.swift */; };
+		FA25D08F26E4F2C100CB81C1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D08E26E4F2C100CB81C1 /* MainView.swift */; };
+		FA25D09126E4F31C00CB81C1 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D09026E4F31C00CB81C1 /* PostView.swift */; };
+		FA25D09326E4F44A00CB81C1 /* PostCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D09226E4F44A00CB81C1 /* PostCreateViewModel.swift */; };
+		FA25D09626E4F69500CB81C1 /* ViewModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25D09526E4F69500CB81C1 /* ViewModelContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		FA25D02F26E383C700CB81C1 /* CoreDataSwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataSwiftUI.xcdatamodel; sourceTree = "<group>"; };
 		FA25D03126E383C700CB81C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA25D03726E48D9400CB81C1 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		FA25D08726E4F17900CB81C1 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		FA25D08926E4F1DD00CB81C1 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		FA25D08E26E4F2C100CB81C1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FA25D09026E4F31C00CB81C1 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		FA25D09226E4F44A00CB81C1 /* PostCreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateViewModel.swift; sourceTree = "<group>"; };
+		FA25D09526E4F69500CB81C1 /* ViewModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +70,10 @@
 		FA25D02226E383C400CB81C1 /* CoreDataSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				FA25D02326E383C400CB81C1 /* CoreDataSwiftUIApp.swift */,
-				FA25D02526E383C400CB81C1 /* ContentView.swift */,
-				FA25D02726E383C700CB81C1 /* Assets.xcassets */,
-				FA25D02C26E383C700CB81C1 /* Persistence.swift */,
-				FA25D03126E383C700CB81C1 /* Info.plist */,
-				FA25D02E26E383C700CB81C1 /* CoreDataSwiftUI.xcdatamodeld */,
+				FA25D08326E4EE3A00CB81C1 /* App */,
+				FA25D08526E4EE6600CB81C1 /* Screens */,
+				FA25D09726E4FA3A00CB81C1 /* Data */,
 				FA25D02926E383C700CB81C1 /* Preview Content */,
-				FA25D03726E48D9400CB81C1 /* CreatePostView.swift */,
 			);
 			path = CoreDataSwiftUI;
 			sourceTree = "<group>";
@@ -76,6 +84,88 @@
 				FA25D02A26E383C700CB81C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA25D08326E4EE3A00CB81C1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D02526E383C400CB81C1 /* ContentView.swift */,
+				FA25D02326E383C400CB81C1 /* CoreDataSwiftUIApp.swift */,
+				FA25D02726E383C700CB81C1 /* Assets.xcassets */,
+				FA25D03126E383C700CB81C1 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA25D08426E4EE5200CB81C1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D02C26E383C700CB81C1 /* Persistence.swift */,
+				FA25D02E26E383C700CB81C1 /* CoreDataSwiftUI.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FA25D08526E4EE6600CB81C1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D08D26E4F27600CB81C1 /* Main */,
+				FA25D08C26E4F26900CB81C1 /* Post */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FA25D08626E4F14D00CB81C1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D08926E4F1DD00CB81C1 /* ViewModelFactory.swift */,
+				FA25D08B26E4F1E400CB81C1 /* Post */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FA25D08B26E4F1E400CB81C1 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D08726E4F17900CB81C1 /* PostViewModel.swift */,
+				FA25D09226E4F44A00CB81C1 /* PostCreateViewModel.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		FA25D08C26E4F26900CB81C1 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D03726E48D9400CB81C1 /* CreatePostView.swift */,
+				FA25D09026E4F31C00CB81C1 /* PostView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		FA25D08D26E4F27600CB81C1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D08E26E4F2C100CB81C1 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FA25D09426E4F64900CB81C1 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D09526E4F69500CB81C1 /* ViewModelContainer.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		FA25D09726E4FA3A00CB81C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FA25D08426E4EE5200CB81C1 /* CoreData */,
+				FA25D09426E4F64900CB81C1 /* Container */,
+				FA25D08626E4F14D00CB81C1 /* ViewModels */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,11 +237,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA25D08826E4F17900CB81C1 /* PostViewModel.swift in Sources */,
+				FA25D08F26E4F2C100CB81C1 /* MainView.swift in Sources */,
+				FA25D09626E4F69500CB81C1 /* ViewModelContainer.swift in Sources */,
+				FA25D09326E4F44A00CB81C1 /* PostCreateViewModel.swift in Sources */,
 				FA25D03826E48D9400CB81C1 /* CreatePostView.swift in Sources */,
 				FA25D02D26E383C700CB81C1 /* Persistence.swift in Sources */,
 				FA25D02626E383C400CB81C1 /* ContentView.swift in Sources */,
 				FA25D03026E383C700CB81C1 /* CoreDataSwiftUI.xcdatamodeld in Sources */,
 				FA25D02426E383C400CB81C1 /* CoreDataSwiftUIApp.swift in Sources */,
+				FA25D09126E4F31C00CB81C1 /* PostView.swift in Sources */,
+				FA25D08A26E4F1DD00CB81C1 /* ViewModelFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +379,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoreDataSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 7N3FZGFXJT;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = CoreDataSwiftUI/Info.plist;
+				INFOPLIST_FILE = CoreDataSwiftUI/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +401,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CoreDataSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 7N3FZGFXJT;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = CoreDataSwiftUI/Info.plist;
+				INFOPLIST_FILE = CoreDataSwiftUI/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

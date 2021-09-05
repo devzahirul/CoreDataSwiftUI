@@ -56,14 +56,3 @@ struct CreatePostView_Previews: PreviewProvider {
 }
 
 
-/**
- 
-1. problem->>>>>
-  -> checkIn , -> database not safe (iOS)
- ->iOS checkin sending......
- -> Android is ok
- =======================
-
- 2.
- 
- */
