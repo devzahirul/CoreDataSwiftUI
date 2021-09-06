@@ -15,6 +15,11 @@
 		FAB0F44A26E6A19D00944986 /* CoreDataMVVMSiwftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F44826E6A19D00944986 /* CoreDataMVVMSiwftUI.xcdatamodeld */; };
 		FAB0F45526E6A19D00944986 /* CoreDataMVVMSiwftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F45426E6A19D00944986 /* CoreDataMVVMSiwftUITests.swift */; };
 		FAB0F46026E6A19D00944986 /* CoreDataMVVMSiwftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F45F26E6A19D00944986 /* CoreDataMVVMSiwftUIUITests.swift */; };
+		FAB0F47426E6A39600944986 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47326E6A39600944986 /* ItemListView.swift */; };
+		FAB0F47726E6A7B300944986 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47626E6A7B300944986 /* AppContext.swift */; };
+		FAB0F47926E6A7C600944986 /* AppContextKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47826E6A7C600944986 /* AppContextKeys.swift */; };
+		FAB0F47B26E6A7D500944986 /* AppContextValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47A26E6A7D500944986 /* AppContextValues.swift */; };
+		FAB0F47E26E6AB7F00944986 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47D26E6AB7F00944986 /* DateFormatters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		FAB0F45B26E6A19D00944986 /* CoreDataMVVMSiwftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataMVVMSiwftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0F45F26E6A19D00944986 /* CoreDataMVVMSiwftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMVVMSiwftUIUITests.swift; sourceTree = "<group>"; };
 		FAB0F46126E6A19D00944986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB0F47326E6A39600944986 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		FAB0F47626E6A7B300944986 /* AppContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
+		FAB0F47826E6A7C600944986 /* AppContextKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextKeys.swift; sourceTree = "<group>"; };
+		FAB0F47A26E6A7D500944986 /* AppContextValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextValues.swift; sourceTree = "<group>"; };
+		FAB0F47D26E6AB7F00944986 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,10 @@
 		FAB0F43C26E6A19B00944986 /* CoreDataMVVMSiwftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FAB0F47C26E6AB6C00944986 /* Helpers */,
+				FAB0F47526E6A78900944986 /* Context */,
 				FAB0F47026E6A27B00944986 /* App */,
-				FAB0F46F26E6A26300944986 /* Views */,
+				FAB0F46F26E6A26300944986 /* Screens */,
 				FAB0F46D26E6A23F00944986 /* Data */,
 				FAB0F44326E6A19C00944986 /* Preview Content */,
 			);
@@ -150,22 +162,49 @@
 			path = "Core Data";
 			sourceTree = "<group>";
 		};
-		FAB0F46F26E6A26300944986 /* Views */ = {
+		FAB0F46F26E6A26300944986 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				FAB0F43F26E6A19B00944986 /* ContentView.swift */,
+				FAB0F47F26E6ABF300944986 /* Item */,
 			);
-			path = Views;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		FAB0F47026E6A27B00944986 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				FAB0F43F26E6A19B00944986 /* ContentView.swift */,
 				FAB0F43D26E6A19B00944986 /* CoreDataMVVMSiwftUIApp.swift */,
 				FAB0F44126E6A19C00944986 /* Assets.xcassets */,
 				FAB0F44B26E6A19D00944986 /* Info.plist */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		FAB0F47526E6A78900944986 /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0F47626E6A7B300944986 /* AppContext.swift */,
+				FAB0F47826E6A7C600944986 /* AppContextKeys.swift */,
+				FAB0F47A26E6A7D500944986 /* AppContextValues.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		FAB0F47C26E6AB6C00944986 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0F47D26E6AB7F00944986 /* DateFormatters.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FAB0F47F26E6ABF300944986 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0F47326E6A39600944986 /* ItemListView.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,10 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB0F47426E6A39600944986 /* ItemListView.swift in Sources */,
+				FAB0F47726E6A7B300944986 /* AppContext.swift in Sources */,
 				FAB0F44A26E6A19D00944986 /* CoreDataMVVMSiwftUI.xcdatamodeld in Sources */,
+				FAB0F47E26E6AB7F00944986 /* DateFormatters.swift in Sources */,
+				FAB0F47926E6A7C600944986 /* AppContextKeys.swift in Sources */,
 				FAB0F44726E6A19D00944986 /* Persistence.swift in Sources */,
 				FAB0F44026E6A19B00944986 /* ContentView.swift in Sources */,
 				FAB0F43E26E6A19B00944986 /* CoreDataMVVMSiwftUIApp.swift in Sources */,
+				FAB0F47B26E6A7D500944986 /* AppContextValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
