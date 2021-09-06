@@ -20,6 +20,8 @@
 		FAB0F47926E6A7C600944986 /* AppContextKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47826E6A7C600944986 /* AppContextKeys.swift */; };
 		FAB0F47B26E6A7D500944986 /* AppContextValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47A26E6A7D500944986 /* AppContextValues.swift */; };
 		FAB0F47E26E6AB7F00944986 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F47D26E6AB7F00944986 /* DateFormatters.swift */; };
+		FAB0F48226E6ACE600944986 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F48126E6ACE600944986 /* ItemViewModel.swift */; };
+		FAB0F48426E6AEBC00944986 /* AppViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB0F48326E6AEBC00944986 /* AppViewModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		FAB0F47826E6A7C600944986 /* AppContextKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextKeys.swift; sourceTree = "<group>"; };
 		FAB0F47A26E6A7D500944986 /* AppContextValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextValues.swift; sourceTree = "<group>"; };
 		FAB0F47D26E6AB7F00944986 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		FAB0F48126E6ACE600944986 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		FAB0F48326E6AEBC00944986 /* AppViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +152,9 @@
 		FAB0F46D26E6A23F00944986 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FAB0F48026E6ACCC00944986 /* Item */,
 				FAB0F46E26E6A25100944986 /* Core Data */,
+				FAB0F48326E6AEBC00944986 /* AppViewModels.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -203,6 +209,14 @@
 			isa = PBXGroup;
 			children = (
 				FAB0F47326E6A39600944986 /* ItemListView.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		FAB0F48026E6ACCC00944986 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0F48126E6ACE600944986 /* ItemViewModel.swift */,
 			);
 			path = Item;
 			sourceTree = "<group>";
@@ -338,7 +352,9 @@
 			files = (
 				FAB0F47426E6A39600944986 /* ItemListView.swift in Sources */,
 				FAB0F47726E6A7B300944986 /* AppContext.swift in Sources */,
+				FAB0F48426E6AEBC00944986 /* AppViewModels.swift in Sources */,
 				FAB0F44A26E6A19D00944986 /* CoreDataMVVMSiwftUI.xcdatamodeld in Sources */,
+				FAB0F48226E6ACE600944986 /* ItemViewModel.swift in Sources */,
 				FAB0F47E26E6AB7F00944986 /* DateFormatters.swift in Sources */,
 				FAB0F47926E6A7C600944986 /* AppContextKeys.swift in Sources */,
 				FAB0F44726E6A19D00944986 /* Persistence.swift in Sources */,
