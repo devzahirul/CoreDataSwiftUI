@@ -1,15 +1,14 @@
 //
 //  ContentView.swift
-//  Shared
+//  CoreDataMVVMSiwftUI
 //
-//  Created by Islam Md. Zahirul on 5/9/21.
+//  Created by Islam Md. Zahirul on 7/9/21.
 //
 
 import SwiftUI
 import CoreData
 
-
-struct DemoCoreDataListView: View {
+struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -64,55 +63,6 @@ struct DemoCoreDataListView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
-    }
-}
-
-
-
-struct AddNewContentView: View {
-    
-    @State var title = ""
-    @State var content = ""
-    @State var tags = ""
-    @State var attachment = ""
-    
-    
-    var body: some View {
-        NavigationView {
-            
-            Form {
-                
-                Section {
-                    TextField("Title", text: $title)
-                }
-                
-                Section {
-                    TextField("Title", text: $title)
-                }
-                
-                Section {
-                    TextField("Title", text: $title)
-                }
-                
-                Section {
-                    TextField("Title", text: $title)
-                }
-                
-            }
-            
-            
-        }
-    }
-}
-
-
-struct ContentView: View {
-    var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/,
-                content:  {
-                    Text("All Contents").tabItem { Text("All Contents") }.tag(1)
-                    AddNewContentView().tabItem { Text("Add New Content") }.tag(2)
-                })
     }
 }
 

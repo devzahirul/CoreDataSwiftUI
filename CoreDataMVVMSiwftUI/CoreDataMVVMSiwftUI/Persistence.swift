@@ -1,8 +1,8 @@
 //
 //  Persistence.swift
-//  CoreDataSwiftUI
+//  CoreDataMVVMSiwftUI
 //
-//  Created by Islam Md. Zahirul on 4/9/21.
+//  Created by Islam Md. Zahirul on 7/9/21.
 //
 
 import CoreData
@@ -14,9 +14,8 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Post(context: viewContext)
-            newItem.title = "Swift"
-            newItem.content = "A. Programmer"
+            let newItem = Item(context: viewContext)
+            newItem.timestamp = Date()
         }
         do {
             try viewContext.save()
@@ -29,10 +28,10 @@ struct PersistenceController {
         return result
     }()
 
-    let container: NSPersistentContainer
+    let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "CoreDataSwiftUI")
+        container = NSPersistentCloudKitContainer(name: "CoreDataMVVMSiwftUI")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
@@ -54,22 +53,3 @@ struct PersistenceController {
         })
     }
 }
-
-
-// Post
-/*
- content          Attachment                        imageData
- title            thumbnail                         data
- ==Relation==     uuid                              Relation==
- attachments (one to Many)     ==Relation===        (one to one)attachment
- tags             imageData
-                  post
- 
- Tag
- color
- name
- uuid
- ==Relation==(Many to Many)
- posts
- 
- */

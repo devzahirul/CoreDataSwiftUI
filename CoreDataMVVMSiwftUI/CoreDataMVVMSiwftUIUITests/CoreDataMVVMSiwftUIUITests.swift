@@ -1,13 +1,13 @@
 //
-//  Tests_macOS.swift
-//  Tests macOS
+//  CoreDataMVVMSiwftUIUITests.swift
+//  CoreDataMVVMSiwftUIUITests
 //
-//  Created by Islam Md. Zahirul on 5/9/21.
+//  Created by Islam Md. Zahirul on 7/9/21.
 //
 
 import XCTest
 
-class Tests_macOS: XCTestCase {
+class CoreDataMVVMSiwftUIUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

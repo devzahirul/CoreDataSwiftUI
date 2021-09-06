@@ -1,14 +1,14 @@
 //
-//  CoreDataSwiftUIApp.swift
-//  CoreDataSwiftUI
+//  CoreDataMVVMSiwftUIApp.swift
+//  CoreDataMVVMSiwftUI
 //
-//  Created by Islam Md. Zahirul on 4/9/21.
+//  Created by Islam Md. Zahirul on 7/9/21.
 //
 
 import SwiftUI
 
 @main
-struct CoreDataSwiftUIApp: App {
+struct CoreDataMVVMSiwftUIApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
