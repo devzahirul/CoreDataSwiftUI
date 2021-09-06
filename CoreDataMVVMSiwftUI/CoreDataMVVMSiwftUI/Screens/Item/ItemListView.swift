@@ -30,7 +30,9 @@ struct ItemListView: View {
             ForEach(items) { item in
                 Text("Item at \(item.timestamp!, formatter: itemFormatter)")
             }
-            .onDelete(perform: itemContainer.itemViewModel.deleteItems)
+            .onDelete(perform: { indexSet in
+                itemContainer.itemViewModel.delete(items, offsets: indexSet)
+            })
         }
         .toolbar {
             HStack {
